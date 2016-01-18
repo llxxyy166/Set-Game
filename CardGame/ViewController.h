@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+#define TOTAL_SETS_FOUND @"totalSetsFound"
+#define TOTAL_GAMES_WON @"totalGamesWon"
+#define TOTAL_GAMES_GIVEUP @"totalGamesGiveup"
 
 @end
 

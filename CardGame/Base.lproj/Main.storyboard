@@ -1,25 +1,866 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7GG-9h-XrI">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="IrW-Vg-hUf">
+            <objects>
+                <viewController id="9Vc-1F-UBY" customClass="MenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Me-81-EtD"/>
+                        <viewControllerLayoutGuide type="bottom" id="UaV-qp-HSh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IDx-aw-Nm1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixa-Gf-nk6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="HPs-sT-aIw"/>
+                                    <constraint firstAttribute="height" constant="100" id="QJd-mW-wvy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="GO!!!">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HPs-sT-aIw"/>
+                                        <exclude reference="QJd-mW-wvy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="HPs-sT-aIw"/>
+                                        <include reference="QJd-mW-wvy"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="EUh-Iu-Z2K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHt-9v-ijn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Stats">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="statsButton" destination="9Vc-1F-UBY" eventType="touchUpInside" id="I04-jT-Dcc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6Y-FA-wpD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingsButton" destination="9Vc-1F-UBY" eventType="touchUpInside" id="yea-I6-3mG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiZ-Nq-vEv">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Ep7-Km-cAb"/>
+                                    <constraint firstAttribute="width" secondItem="DiZ-Nq-vEv" secondAttribute="height" multiplier="2:1" id="ZfW-FL-xGr"/>
+                                    <constraint firstAttribute="height" constant="150" id="hkB-Mh-ykK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ep7-Km-cAb"/>
+                                        <exclude reference="ZfW-FL-xGr"/>
+                                        <exclude reference="hkB-Mh-ykK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Ep7-Km-cAb"/>
+                                        <include reference="ZfW-FL-xGr"/>
+                                        <include reference="hkB-Mh-ykK"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRq-bd-AS1">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeM-Km-lK6">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haq-Ou-y3f">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="c8D-4O-Bfq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="c8D-4O-Bfq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="c8D-4O-Bfq"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76136678459999996" green="0.7493837928" blue="0.58134175779999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="sHt-9v-ijn" firstAttribute="height" secondItem="Ixa-Gf-nk6" secondAttribute="height" id="0dH-5C-s4c"/>
+                            <constraint firstItem="WeM-Km-lK6" firstAttribute="top" secondItem="IRq-bd-AS1" secondAttribute="bottom" constant="19" id="5Vt-OM-5ik"/>
+                            <constraint firstItem="J6Y-FA-wpD" firstAttribute="width" secondItem="Ixa-Gf-nk6" secondAttribute="width" id="5rq-bz-PhT"/>
+                            <constraint firstItem="J6Y-FA-wpD" firstAttribute="height" secondItem="Ixa-Gf-nk6" secondAttribute="height" id="9UK-73-B1Z"/>
+                            <constraint firstItem="IRq-bd-AS1" firstAttribute="trailing" secondItem="haq-Ou-y3f" secondAttribute="trailing" id="Ahl-LM-LW9"/>
+                            <constraint firstItem="sHt-9v-ijn" firstAttribute="top" secondItem="Ixa-Gf-nk6" secondAttribute="bottom" constant="97" id="Au9-wP-uaP"/>
+                            <constraint firstItem="WeM-Km-lK6" firstAttribute="trailing" secondItem="IRq-bd-AS1" secondAttribute="trailing" id="CAn-VW-WtR"/>
+                            <constraint firstItem="J6Y-FA-wpD" firstAttribute="leading" secondItem="Ixa-Gf-nk6" secondAttribute="leading" id="Dw5-Yw-DsM"/>
+                            <constraint firstItem="sHt-9v-ijn" firstAttribute="width" secondItem="Ixa-Gf-nk6" secondAttribute="width" id="EWg-3W-0uh"/>
+                            <constraint firstItem="Ixa-Gf-nk6" firstAttribute="centerY" secondItem="IDx-aw-Nm1" secondAttribute="centerY" id="L3i-68-v68"/>
+                            <constraint firstItem="IRq-bd-AS1" firstAttribute="centerY" secondItem="sHt-9v-ijn" secondAttribute="centerY" id="LhP-5d-j6f"/>
+                            <constraint firstItem="WeM-Km-lK6" firstAttribute="trailing" secondItem="IDx-aw-Nm1" secondAttribute="trailingMargin" id="Mrb-xX-xg2"/>
+                            <constraint firstItem="IRq-bd-AS1" firstAttribute="top" secondItem="haq-Ou-y3f" secondAttribute="bottom" constant="18" id="Q63-zk-vVY"/>
+                            <constraint firstItem="DiZ-Nq-vEv" firstAttribute="top" secondItem="1Me-81-EtD" secondAttribute="bottom" id="SDc-Nd-UHZ"/>
+                            <constraint firstItem="DiZ-Nq-vEv" firstAttribute="centerX" secondItem="IDx-aw-Nm1" secondAttribute="centerX" id="TUA-bp-FhX"/>
+                            <constraint firstItem="WeM-Km-lK6" firstAttribute="leading" secondItem="IRq-bd-AS1" secondAttribute="leading" id="Zzy-od-xQx"/>
+                            <constraint firstItem="haq-Ou-y3f" firstAttribute="top" secondItem="sHt-9v-ijn" secondAttribute="top" id="cid-M0-K7D"/>
+                            <constraint firstItem="sHt-9v-ijn" firstAttribute="leading" secondItem="Ixa-Gf-nk6" secondAttribute="leading" id="dWs-7o-3TD"/>
+                            <constraint firstItem="WeM-Km-lK6" firstAttribute="bottom" secondItem="sHt-9v-ijn" secondAttribute="bottom" id="g62-7X-VAM"/>
+                            <constraint firstItem="Ixa-Gf-nk6" firstAttribute="centerX" secondItem="DiZ-Nq-vEv" secondAttribute="centerX" id="hlg-VQ-Unu"/>
+                            <constraint firstItem="haq-Ou-y3f" firstAttribute="leading" secondItem="sHt-9v-ijn" secondAttribute="trailing" constant="8" symbolic="YES" id="pKR-iV-IkI"/>
+                            <constraint firstItem="haq-Ou-y3f" firstAttribute="leading" secondItem="IRq-bd-AS1" secondAttribute="leading" id="ptd-fE-FMV"/>
+                            <constraint firstItem="J6Y-FA-wpD" firstAttribute="top" secondItem="Ixa-Gf-nk6" secondAttribute="bottom" id="yIW-ua-Adf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ixa-Gf-nk6"/>
+                                <exclude reference="sHt-9v-ijn"/>
+                                <exclude reference="J6Y-FA-wpD"/>
+                                <exclude reference="DiZ-Nq-vEv"/>
+                                <exclude reference="IRq-bd-AS1"/>
+                                <exclude reference="WeM-Km-lK6"/>
+                                <exclude reference="haq-Ou-y3f"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="L3i-68-v68"/>
+                                <exclude reference="hlg-VQ-Unu"/>
+                                <exclude reference="5rq-bz-PhT"/>
+                                <exclude reference="9UK-73-B1Z"/>
+                                <exclude reference="Dw5-Yw-DsM"/>
+                                <exclude reference="yIW-ua-Adf"/>
+                                <exclude reference="0dH-5C-s4c"/>
+                                <exclude reference="Au9-wP-uaP"/>
+                                <exclude reference="EWg-3W-0uh"/>
+                                <exclude reference="dWs-7o-3TD"/>
+                                <exclude reference="TUA-bp-FhX"/>
+                                <exclude reference="Ahl-LM-LW9"/>
+                                <exclude reference="LhP-5d-j6f"/>
+                                <exclude reference="Q63-zk-vVY"/>
+                                <exclude reference="5Vt-OM-5ik"/>
+                                <exclude reference="CAn-VW-WtR"/>
+                                <exclude reference="Mrb-xX-xg2"/>
+                                <exclude reference="Zzy-od-xQx"/>
+                                <exclude reference="g62-7X-VAM"/>
+                                <exclude reference="cid-M0-K7D"/>
+                                <exclude reference="pKR-iV-IkI"/>
+                                <exclude reference="ptd-fE-FMV"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="Ixa-Gf-nk6"/>
+                                <include reference="sHt-9v-ijn"/>
+                                <include reference="J6Y-FA-wpD"/>
+                                <include reference="DiZ-Nq-vEv"/>
+                                <include reference="IRq-bd-AS1"/>
+                                <include reference="WeM-Km-lK6"/>
+                                <include reference="haq-Ou-y3f"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="L3i-68-v68"/>
+                                <include reference="hlg-VQ-Unu"/>
+                                <include reference="5rq-bz-PhT"/>
+                                <include reference="9UK-73-B1Z"/>
+                                <include reference="Dw5-Yw-DsM"/>
+                                <include reference="yIW-ua-Adf"/>
+                                <include reference="0dH-5C-s4c"/>
+                                <include reference="Au9-wP-uaP"/>
+                                <include reference="EWg-3W-0uh"/>
+                                <include reference="dWs-7o-3TD"/>
+                                <include reference="TUA-bp-FhX"/>
+                                <include reference="Ahl-LM-LW9"/>
+                                <include reference="LhP-5d-j6f"/>
+                                <include reference="Q63-zk-vVY"/>
+                                <include reference="5Vt-OM-5ik"/>
+                                <include reference="CAn-VW-WtR"/>
+                                <include reference="Mrb-xX-xg2"/>
+                                <include reference="Zzy-od-xQx"/>
+                                <include reference="g62-7X-VAM"/>
+                                <include reference="cid-M0-K7D"/>
+                                <include reference="pKR-iV-IkI"/>
+                                <include reference="ptd-fE-FMV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="g0o-Ke-bzu"/>
+                    <connections>
+                        <outlet property="gameTitle" destination="DiZ-Nq-vEv" id="UNW-wT-Rau"/>
+                        <outlet property="stats1" destination="haq-Ou-y3f" id="kHW-b2-Rj8"/>
+                        <outlet property="stats2" destination="IRq-bd-AS1" id="Pi6-Ju-UeC"/>
+                        <outlet property="stats3" destination="WeM-Km-lK6" id="SYd-gC-k6X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6De-p3-Unm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988.5" y="-321"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="PEa-cj-QSZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="2WY-Wd-JYb"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HHs-sW-xnP" customClass="SetCardView">
+                                <rect key="frame" x="20" y="472" width="120" height="180"/>
+                                <subviews>
+                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KKB-Jd-DWU" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="70" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="50" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DRT-HI-uXH" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="28" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="8" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ht-ze-dbE" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="112" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="92" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="324" width="90" height="140"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Mpu-qd-1KO" appends="YES" id="P1G-qZ-Ozr"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HtY-21-xE6" customClass="SetCardView">
+                                <rect key="frame" x="20" y="272" width="120" height="180"/>
+                                <subviews>
+                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4j9-sk-Cby" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="70" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="50" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u6y-XR-Vx0" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="28" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="8" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n0N-DD-Ni1" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="112" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="92" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="176" width="90" height="140"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UNY-r2-M9R" appends="YES" id="DIv-Ww-a65"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1lE-BN-NOx" customClass="SetCardView">
+                                <rect key="frame" x="240" y="72" width="120" height="180"/>
+                                <subviews>
+                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpl-7a-Ncx" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="70" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="50" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wd8-EY-vtA" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="112" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="92" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F0I-bK-pcJ" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="28" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="8" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="155" y="28" width="90" height="140"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="223" y="72" width="120" height="180"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="aSE-Ay-0NP" appends="YES" id="IOe-Dv-61m"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXV-9K-iQs" customClass="SetCardView">
+                                <rect key="frame" x="240" y="272" width="120" height="180"/>
+                                <subviews>
+                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R85-JO-f3Y" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="70" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="50" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zbr-ov-d3I" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="28" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="8" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0r-0j-mxx" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="112" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="92" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="290" y="28" width="90" height="140"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="223" y="272" width="120" height="180"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lWD-WO-zCs" appends="YES" id="AcE-Nc-586"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What Happens" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWo-db-cwb">
+                                <rect key="frame" x="20" y="759" width="114" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="661" width="360" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="759" width="526" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 Sets total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPW-M7-BAE">
+                                <rect key="frame" x="240" y="699" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="250" y="632" width="130" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="223" y="699" width="120" height="21"/>
+                                </variation>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ze-YT-dc4" customClass="SetCardView">
+                                <rect key="frame" x="20" y="72" width="120" height="180"/>
+                                <subviews>
+                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lVa-op-3xH" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="70" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="50" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Bt-qo-gu5" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="112" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="92" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ols-hp-UJf" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="28" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="8" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="28" width="90" height="140"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3yc-Zy-mwC" appends="YES" id="2O4-ke-fOf"/>
+                                </connections>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dte-xf-uhd" customClass="SetCardView">
+                                <rect key="frame" x="240" y="472" width="120" height="180"/>
+                                <subviews>
+                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fGj-Jx-uOO" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="70" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="50" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LqX-lu-uQ6" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="28" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="8" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HPb-gs-dU6" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="112" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="92" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="155" y="176" width="90" height="140"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="223" y="472" width="120" height="180"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="iaK-kp-Fob" appends="YES" id="bNO-LI-lWg"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIN-NA-aBu" customClass="SetCardView">
+                                <rect key="frame" x="660" y="72" width="120" height="180"/>
+                                <subviews>
+                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="In0-hi-T9Z" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="70" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="50" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YDh-aU-tGL" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="28" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="8" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5hh-ts-cW4" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="112" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="92" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="290" y="176" width="90" height="140"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="628" y="72" width="120" height="180"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2WO-EF-RH9" appends="YES" id="vMF-wZ-5lj"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Po-M2-0m2" customClass="SetCardView">
+                                <rect key="frame" x="440" y="72" width="120" height="180"/>
+                                <subviews>
+                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hGT-hC-IHP" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="70" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="50" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pTf-yM-HNj" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="28" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="8" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y2S-as-cpy" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="112" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="92" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="155" y="324" width="90" height="140"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="426" y="72" width="120" height="180"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FXO-yx-Jra" appends="YES" id="R2V-0z-3kV"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4YA-vb-VuR" customClass="SetCardView">
+                                <rect key="frame" x="440" y="272" width="120" height="180"/>
+                                <subviews>
+                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhp-0a-ozC" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="70" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="50" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9jc-mG-wez" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="28" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="8" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kbD-ZL-oiB" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="112" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="92" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="290" y="324" width="90" height="140"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="426" y="272" width="120" height="180"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wfr-0R-80j" appends="YES" id="ovD-gU-yZx"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GYU-YU-C68" customClass="SetCardView">
+                                <rect key="frame" x="440" y="472" width="120" height="180"/>
+                                <subviews>
+                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YPW-Dg-DGK" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="70" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="50" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qM9-6A-9Cg" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="112" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="92" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o3f-ro-8Fu" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="28" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="8" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="472" width="90" height="140"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="426" y="472" width="120" height="180"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Rfr-5H-v2J" appends="YES" id="0pW-Fi-ued"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cLN-Ct-vj5" customClass="SetCardView">
+                                <rect key="frame" x="660" y="272" width="120" height="180"/>
+                                <subviews>
+                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R1y-5q-O6K" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="70" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="50" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gao-Xo-ULs" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="28" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="8" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ZS-0u-CTa" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="112" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="92" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="155" y="472" width="90" height="140"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="628" y="272" width="120" height="180"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="iom-h0-OHy" appends="YES" id="BoZ-u0-bRP"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2jz-8a-ifk" customClass="SetCardView">
+                                <rect key="frame" x="660" y="472" width="120" height="180"/>
+                                <subviews>
+                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wkx-bd-UD7" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="70" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="50" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PG1-75-dW7" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="28" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="8" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="136-so-c2W" customClass="SymbolView">
+                                        <rect key="frame" x="30" y="112" width="60" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="92" width="60" height="40"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="290" y="472" width="90" height="140"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="628" y="472" width="120" height="180"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bAi-E8-hef" appends="YES" id="O1Y-fe-oU2"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNr-BA-87o">
+                                <rect key="frame" x="680" y="685" width="100" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="ANSWER">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="685" width="80" height="40"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="648" y="685" width="100" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aHZ-Bf-2lI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 Sets Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cal-uZ-wPV">
+                                <rect key="frame" x="20" y="699" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="632" width="130" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="699" width="120" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jq-JH-5xN">
+                                <rect key="frame" x="680" y="733" width="100" height="47"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="RESET">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="300" y="685" width="80" height="40"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="648" y="733" width="100" height="47"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="esZ-hY-vkt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76136678459999996" green="0.7493837928" blue="0.58134175779999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="H2z-mP-S5L"/>
+                    <connections>
+                        <outlet property="score" destination="Cal-uZ-wPV" id="wd5-fs-rB1"/>
+                        <outlet property="showAnswerButton" destination="RNr-BA-87o" id="dPw-KB-BXP"/>
+                        <outlet property="totalSets" destination="cPW-M7-BAE" id="soH-GC-1z5"/>
+                        <outlet property="whatHappens" destination="UWo-db-cwb" id="uxD-ha-rwT"/>
+                        <outletCollection property="setCardsViews" destination="2ze-YT-dc4" id="VJB-Jf-rqE"/>
+                        <outletCollection property="setCardsViews" destination="1lE-BN-NOx" id="cTp-0S-hzy"/>
+                        <outletCollection property="setCardsViews" destination="7Po-M2-0m2" id="GTE-H1-59c"/>
+                        <outletCollection property="setCardsViews" destination="HtY-21-xE6" id="9Rc-BS-unB"/>
+                        <outletCollection property="setCardsViews" destination="QXV-9K-iQs" id="1CQ-cj-hmb"/>
+                        <outletCollection property="setCardsViews" destination="4YA-vb-VuR" id="dry-T4-lKx"/>
+                        <outletCollection property="setCardsViews" destination="HHs-sW-xnP" id="Bfr-fQ-JWh"/>
+                        <outletCollection property="setCardsViews" destination="Dte-xf-uhd" id="4AT-Ic-Cxo"/>
+                        <outletCollection property="setCardsViews" destination="AIN-NA-aBu" id="RcX-76-Irf"/>
+                        <outletCollection property="setCardsViews" destination="cLN-Ct-vj5" id="cRU-fe-B6s"/>
+                        <outletCollection property="setCardsViews" destination="2jz-8a-ifk" id="IkR-Nb-jiu"/>
+                        <outletCollection property="setCardsViews" destination="GYU-YU-C68" id="4el-64-xAX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3yc-Zy-mwC">
+                    <connections>
+                        <action selector="chooseCard:" destination="BYZ-38-t0r" id="40f-sH-aJL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="aSE-Ay-0NP">
+                    <connections>
+                        <action selector="chooseCard:" destination="BYZ-38-t0r" id="hdm-tI-A1P"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FXO-yx-Jra">
+                    <connections>
+                        <action selector="chooseCard:" destination="BYZ-38-t0r" id="Icg-j0-KoC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="UNY-r2-M9R">
+                    <connections>
+                        <action selector="chooseCard:" destination="BYZ-38-t0r" id="4Nm-7W-tY8"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="lWD-WO-zCs">
+                    <connections>
+                        <action selector="chooseCard:" destination="BYZ-38-t0r" id="6L9-By-NNn"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wfr-0R-80j">
+                    <connections>
+                        <action selector="chooseCard:" destination="BYZ-38-t0r" id="IaZ-y3-0lD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Mpu-qd-1KO">
+                    <connections>
+                        <action selector="chooseCard:" destination="BYZ-38-t0r" id="RLc-8Q-DKU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="iaK-kp-Fob">
+                    <connections>
+                        <action selector="chooseCard:" destination="BYZ-38-t0r" id="5Ia-9t-EJg"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Rfr-5H-v2J">
+                    <connections>
+                        <action selector="chooseCard:" destination="BYZ-38-t0r" id="pQL-Im-IdE"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="2WO-EF-RH9">
+                    <connections>
+                        <action selector="chooseCard:" destination="BYZ-38-t0r" id="tTd-RP-8hz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="iom-h0-OHy">
+                    <connections>
+                        <action selector="chooseCard:" destination="BYZ-38-t0r" id="tFW-hh-97V"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bAi-E8-hef">
+                    <connections>
+                        <action selector="chooseCard:" destination="BYZ-38-t0r" id="LWB-LP-N4P"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="1746.75" y="-507"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7ng-mG-zKI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7GG-9h-XrI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3E5-0H-r0O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9Vc-1F-UBY" kind="relationship" relationship="rootViewController" id="240-bm-beP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3l4-8C-n7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.5" y="-321"/>
         </scene>
     </scenes>
 </document>
